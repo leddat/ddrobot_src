@@ -1,0 +1,33 @@
+<launch>
+ 
+
+    <param name="robot_description" command="$(find xacro)/xacro '$(find ddrobot_description)/urdf/ddrobot.urdf.xacro'"/>
+ 
+  <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" />
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
+
+  <node pkg="rosserial_python" name="rosserial_lino" type="serial_node.py" output="screen">
+        <param name="port" value="/dev/ttyACM0" />
+        <param name="baud" value="57600" />
+    </node>
+
+    <!-- IMU Relay and Filter -->
+    <include file="$(find linorobot)/launch/include/imu/imu.launch" />
+
+    <!--LIDAR-->
+    <include file="$(find rplidar_ros)/launch/rplidar.launch" />
+
+    <!--PS4-->
+    <!-- <include file="$(find ddrobot_bringup)/launch/ds4.launch"/> -->
+
+    <!-- Publish Linorobot odometry -->
+    <node pkg="linorobot" name="lino_base_node" type="lino_base_node"></node>
+
+    <node pkg="robot_localization" type="ekf_localization_node" name="ekf_localization"> 
+        <remap from="odometry/filtered" to="odom" />
+        <rosparam command="load" file="$(find linorobot)/param/ekf/robot_localization.yaml" />
+    </node>
+
+
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find ddrobot_description)/rviz/model.rviz" />
+</launch>

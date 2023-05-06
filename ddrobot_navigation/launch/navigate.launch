@@ -1,0 +1,7 @@
+<launch>
+    <arg name="map_file" default="$(find linorobot)/maps/house.yaml"/>
+    <node pkg="map_server" name="map_server"  type="map_server" args="$(arg map_file)" />
+    <include file="$(find ddrobot_description)/launch/gazebo.launch"/>
+    <include file="$(find ddrobot_navigation)/launch/amcl.launch"/>
+    <include file="$(find ddrobot_navigation)/launch/move_base.launch"/>
+</launch>

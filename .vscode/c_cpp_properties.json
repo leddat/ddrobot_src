@@ -1,0 +1,47 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${default}",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/home/ledat/stm32_ws/devel/include/**",
+        "/home/ledat/catkin_ws/devel/include/**",
+        "/home/ledat/ros_ws/devel/include/**",
+        "/opt/ros/noetic/include/**",
+        "/home/ledat/dd_ws/src/arduino_node/include/**",
+        "/home/ledat/ros_ws/src/fdilink_ahrs/include/**",
+        "/home/ledat/ros_ws/src/imu_calib/include/**",
+        "/home/ledat/ros_ws/src/imu_tools/imu_complementary_filter/include/**",
+        "/home/ledat/ros_ws/src/imu_tools/imu_filter_madgwick/include/**",
+        "/home/ledat/ros_ws/src/lino_pid/include/**",
+        "/home/ledat/ros_ws/src/linorobot/include/**",
+        "/home/ledat/ros_ws/src/motor_node/include/**",
+        "/home/ledat/ros_ws/src/pubvel/include/**",
+        "/home/ledat/ros_ws/src/robot_localization-noetic-devel/include/**",
+        "/home/ledat/stm32_ws/src/rosserial/rosserial_server/include/**",
+        "/home/ledat/stm32_ws/src/rosserial/rosserial_test/include/**",
+        "/home/ledat/ros_ws/src/session4/include/**",
+        "/home/ledat/ros_ws/src/session5/include/**",
+        "/home/ledat/ros_ws/src/session6/include/**",
+        "/home/ledat/ros_ws/src/slam_toolbox/include/**",
+        "/home/ledat/ros_ws/src/geometry2/tf2/include/**",
+        "/home/ledat/ros_ws/src/geometry2/tf2_bullet/include/**",
+        "/home/ledat/ros_ws/src/geometry2/tf2_eigen/include/**",
+        "/home/ledat/ros_ws/src/geometry2/tf2_geometry_msgs/include/**",
+        "/home/ledat/ros_ws/src/geometry2/tf2_kdl/include/**",
+        "/home/ledat/ros_ws/src/geometry2/tf2_msgs/include/**",
+        "/home/ledat/ros_ws/src/geometry2/tf2_ros/include/**",
+        "/home/ledat/ros_ws/src/geometry2/tf2_sensor_msgs/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-x64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++14"
+    }
+  ],
+  "version": 4
+}
